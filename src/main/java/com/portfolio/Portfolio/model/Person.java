@@ -40,7 +40,7 @@ public class Person {
         this.about1 = about1;
         this.about2 = about2;
         this.url_photo = url_photo;
-    }
-    
+    }  
+
     
 }
