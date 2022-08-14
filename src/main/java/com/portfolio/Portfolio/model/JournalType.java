@@ -1,13 +1,21 @@
 
 package com.portfolio.Portfolio.model;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import lombok.Getter;
 import lombok.Setter;
 
 @Getter @Setter
+@Entity
 public class JournalType {
     
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)    
     private Long id;
+    
     private String journal_type;
 
     public JournalType() {
