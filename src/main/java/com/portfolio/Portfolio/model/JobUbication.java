@@ -14,18 +14,18 @@ public class JobUbication {
     
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)   
-    private Long id;
+    private Long id_job_ubication;
     
     private String job_ubication;
 
     public JobUbication() {
     }
 
-    public JobUbication(Long id, String job_ubication) {
-        this.id = id;
+    public JobUbication(Long id_job_ubication, String job_ubication) {
+        this.id_job_ubication = id_job_ubication;
         this.job_ubication = job_ubication;
     }
-    
+
     
     
 }

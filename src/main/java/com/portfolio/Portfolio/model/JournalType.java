@@ -14,17 +14,17 @@ public class JournalType {
     
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)    
-    private Long id;
+    private Long id_journal;
     
     private String journal_type;
 
     public JournalType() {
     }
 
-    public JournalType(Long id, String journal_type) {
-        this.id = id;
+    public JournalType(Long id_journal, String journal_type) {
+        this.id_journal = id_journal;
         this.journal_type = journal_type;
     }
-    
+ 
     
 }
