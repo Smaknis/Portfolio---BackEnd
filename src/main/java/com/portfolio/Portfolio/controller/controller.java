@@ -45,7 +45,7 @@ public class controller {
        personServ.agregarPerson(person);
     
     }
-    
+       
     @GetMapping ("/ver/person")
     @ResponseBody
     public List<Person> verPersonas(){
@@ -213,7 +213,7 @@ public class controller {
         proyectServ.borrarProyect(Id);
     }
     
-    @PutMapping ("/editjournal/{id}")
+    @PutMapping ("/editproyect/{id}")
     public void editarProyect (@PathVariable Long id, @RequestBody Proyect proy){
         proyectServ.editarProyect(proy);
     }
