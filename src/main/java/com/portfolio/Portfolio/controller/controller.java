@@ -7,7 +7,6 @@ import com.portfolio.Portfolio.model.Job;
 import com.portfolio.Portfolio.model.JobUbication;
 import com.portfolio.Portfolio.model.JournalType;
 import com.portfolio.Portfolio.model.Person;
-import com.portfolio.Portfolio.model.Proyect;
 import com.portfolio.Portfolio.model.SoftSkills;
 import com.portfolio.Portfolio.service.IEducationService;
 import com.portfolio.Portfolio.service.IHardSkillsService;
@@ -15,7 +14,6 @@ import com.portfolio.Portfolio.service.IJobService;
 import com.portfolio.Portfolio.service.IJobUbicationService;
 import com.portfolio.Portfolio.service.IJournalTypeService;
 import com.portfolio.Portfolio.service.IPersonService;
-import com.portfolio.Portfolio.service.IProyectService;
 import com.portfolio.Portfolio.service.ISoftSkillsService;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -192,32 +190,7 @@ public class controller {
         journalServ.editarJournalType(journal);
     }
     
-    @Autowired
-    private IProyectService proyectServ;
-    
-    @GetMapping ("/proyect")
-    @ResponseBody
-    public List<Proyect> verProyect () {
-        
-        return proyectServ.verProyect();
-    }
-    
-    @PostMapping ("/newproyect/proyect")
-    public void agregarProyect(@RequestBody Proyect proy){
-       proyectServ.agregarProyect(proy);
-    
-    }
-    
-    @DeleteMapping ("/deleteproyect/{Id}")
-    public void borrarProyect (@PathVariable Long Id) {
-        proyectServ.borrarProyect(Id);
-    }
-    
-    @PutMapping ("/editproyect/{id}")
-    public void editarProyect (@PathVariable Long id, @RequestBody Proyect proy){
-        proyectServ.editarProyect(proy);
-    }
-    
+   
     @Autowired
     private ISoftSkillsService softServ;
     
