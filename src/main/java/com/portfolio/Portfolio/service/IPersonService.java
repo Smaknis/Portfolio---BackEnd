@@ -7,7 +7,7 @@ import java.util.List;
 
 public interface IPersonService {
     
-    public List<Person> verPersonas();
+    public List<Person> verPerson();
     
     public void agregarPerson (Person person);
     

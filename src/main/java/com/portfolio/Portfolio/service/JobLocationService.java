@@ -1,24 +1,24 @@
 
 package com.portfolio.Portfolio.service;
 
-import com.portfolio.Portfolio.model.JobUbication;
-import com.portfolio.Portfolio.repository.JobUbicationRepository;
+import com.portfolio.Portfolio.model.JobLocation;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import com.portfolio.Portfolio.repository.JobLocationRepository;
 
 @Service
-public class JobUbicationService implements IJobUbicationService{
+public class JobLocationService implements IJobLocationService{
     @Autowired
-    public JobUbicationRepository jobUbicationRepo;
+    public JobLocationRepository jobUbicationRepo;
     
     @Override
-    public List<JobUbication> verJobUbication() {
+    public List<JobLocation> verJobUbication() {
         return jobUbicationRepo.findAll();
     }
 
     @Override
-    public void agregarJobUbication(JobUbication jobu) {
+    public void agregarJobUbication(JobLocation jobu) {
         jobUbicationRepo.save(jobu);
     }
 
@@ -28,12 +28,12 @@ public class JobUbicationService implements IJobUbicationService{
     }
 
     @Override
-    public JobUbication buscarJobUbication(Long id) {
+    public JobLocation buscarJobUbication(Long id) {
         return jobUbicationRepo.findById(id).orElse(null);
     }
 
     @Override
-    public void editarJobUbication(JobUbication jobu) {
+    public void editarJobUbication(JobLocation jobu) {
         jobUbicationRepo.save(jobu);
     }
 }

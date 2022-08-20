@@ -10,7 +10,7 @@ import lombok.Setter;
 
 @Getter @Setter
 @Entity
-public class JobUbication {
+public class JobLocation {
     
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)   
@@ -18,10 +18,10 @@ public class JobUbication {
     
     private String job_ubication;
 
-    public JobUbication() {
+    public JobLocation() {
     }
 
-    public JobUbication(Long id_job_ubication, String job_ubication) {
+    public JobLocation(Long id_job_ubication, String job_ubication) {
         this.id_job_ubication = id_job_ubication;
         this.job_ubication = job_ubication;
     }

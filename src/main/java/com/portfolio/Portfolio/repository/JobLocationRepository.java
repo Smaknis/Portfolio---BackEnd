@@ -1,11 +1,11 @@
 
 package com.portfolio.Portfolio.repository;
 
-import com.portfolio.Portfolio.model.JobUbication;
+import com.portfolio.Portfolio.model.JobLocation;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface JobUbicationRepository extends JpaRepository <JobUbication, Long>{
+public interface JobLocationRepository extends JpaRepository <JobLocation, Long>{
     
 }

@@ -4,14 +4,13 @@ package com.portfolio.Portfolio.controller;
 import com.portfolio.Portfolio.model.Education;
 import com.portfolio.Portfolio.model.HardSkills;
 import com.portfolio.Portfolio.model.Job;
-import com.portfolio.Portfolio.model.JobUbication;
+import com.portfolio.Portfolio.model.JobLocation;
 import com.portfolio.Portfolio.model.JournalType;
 import com.portfolio.Portfolio.model.Person;
 import com.portfolio.Portfolio.model.SoftSkills;
 import com.portfolio.Portfolio.service.IEducationService;
 import com.portfolio.Portfolio.service.IHardSkillsService;
 import com.portfolio.Portfolio.service.IJobService;
-import com.portfolio.Portfolio.service.IJobUbicationService;
 import com.portfolio.Portfolio.service.IJournalTypeService;
 import com.portfolio.Portfolio.service.IPersonService;
 import com.portfolio.Portfolio.service.ISoftSkillsService;
@@ -25,6 +24,7 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
+import com.portfolio.Portfolio.service.IJobLocationService;
 
 @RestController
 public class controller {
@@ -46,8 +46,8 @@ public class controller {
        
     @GetMapping ("/ver/person")
     @ResponseBody
-    public List<Person> verPersonas(){
-        return personServ.verPersonas();
+    public List<Person> verPerson(){
+        return personServ.verPerson();
     }
     
     @DeleteMapping ("/delete/person/{Id}")
@@ -56,7 +56,7 @@ public class controller {
     }
     
     @PutMapping ("/edit/person/{id}")
-    public void editarPersona (@PathVariable Long id, @RequestBody Person person){
+    public void editarPerson (@PathVariable Long id, @RequestBody Person person){
         personServ.editarPerson(person);
     }
     
@@ -139,17 +139,17 @@ public class controller {
     }
     
     @Autowired
-    private IJobUbicationService jobuServ;
+    private IJobLocationService jobuServ;
     
     @GetMapping ("/jobu")
     @ResponseBody
-    public List<JobUbication> verJobUbication () {
+    public List<JobLocation> verJobUbication () {
         
         return jobuServ.verJobUbication();
     }
     
     @PostMapping ("/newjobu/jobu")
-    public void agregarJobUbication(@RequestBody JobUbication jobu){
+    public void agregarJobUbication(@RequestBody JobLocation jobu){
        jobuServ.agregarJobUbication(jobu);
     
     }
@@ -160,7 +160,7 @@ public class controller {
     }
     
     @PutMapping ("/editjobu/{id}")
-    public void editarJobUbication (@PathVariable Long id, @RequestBody JobUbication jobu){
+    public void editarJobUbication (@PathVariable Long id, @RequestBody JobLocation jobu){
         jobuServ.editarJobUbication(jobu);
     }
     
