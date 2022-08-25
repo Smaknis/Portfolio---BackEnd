@@ -9,7 +9,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 @Getter @Setter
-@Entity
+@Entity (name = "JOURNALTYPE")
 public class JournalType {
     
     @Id

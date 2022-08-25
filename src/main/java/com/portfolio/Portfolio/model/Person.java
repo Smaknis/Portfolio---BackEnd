@@ -9,12 +9,12 @@ import lombok.Getter;
 import lombok.Setter;
 
 @Getter @Setter
-@Entity
+@Entity (name = "PERSON")
 public class Person {
     
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long person_id;
+    private Long id;
     
     private String name;
     private String last_name;
@@ -34,7 +34,7 @@ public class Person {
     }
 
     public Person(Long id, String name, String last_name, String position, String title, String location, String address, String phone, String email, String birth_date, String nationality, String about1, String about2, String url_photo) {
-        this.person_id = id;
+        this.id = id;
         this.name = name;
         this.last_name = last_name;
         this.position = position;

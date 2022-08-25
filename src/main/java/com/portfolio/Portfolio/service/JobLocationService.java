@@ -10,30 +10,30 @@ import com.portfolio.Portfolio.repository.JobLocationRepository;
 @Service
 public class JobLocationService implements IJobLocationService{
     @Autowired
-    public JobLocationRepository jobUbicationRepo;
+    public JobLocationRepository jobLocationRepo;
     
     @Override
-    public List<JobLocation> verJobUbication() {
-        return jobUbicationRepo.findAll();
+    public List verJobLocation() {
+        return jobLocationRepo.findAll();
     }
 
     @Override
-    public void agregarJobUbication(JobLocation jobu) {
-        jobUbicationRepo.save(jobu);
+    public void agregarJobLocation(JobLocation jobu) {
+        jobLocationRepo.save(jobu);
     }
 
     @Override
-    public void borrarJobUbication(Long id) {
-        jobUbicationRepo.deleteById(id);
+    public void borrarJobLocation(Long id) {
+        jobLocationRepo.deleteById(id);
     }
 
     @Override
-    public JobLocation buscarJobUbication(Long id) {
-        return jobUbicationRepo.findById(id).orElse(null);
+    public JobLocation buscarJobLocation(Long id) {
+        return jobLocationRepo.findById(id).orElse(null);
     }
 
     @Override
-    public void editarJobUbication(JobLocation jobu) {
-        jobUbicationRepo.save(jobu);
+    public void editarJobLocation(JobLocation jobu) {
+        jobLocationRepo.save(jobu);
     }
 }

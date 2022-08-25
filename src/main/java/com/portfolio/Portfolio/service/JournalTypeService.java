@@ -14,7 +14,7 @@ public class JournalTypeService implements IJournalTypeService{
     public JournalTypeRepository journalRepo;
     
     @Override
-    public List<JournalType> verJournalType() {
+    public List verJournalType() {
         return journalRepo.findAll();
     }
 

@@ -9,7 +9,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 @Getter @Setter
-@Entity
+@Entity (name = "HARDSKILLS")
 public class HardSkills {
     
     @Id
@@ -18,16 +18,16 @@ public class HardSkills {
     
     private String title_hard;
     private String score_hard;
-    private String person_id;
+    private Long personId;
 
     public HardSkills() {
     }
 
-    public HardSkills(Long id_hard, String title_hard, String score_hard, String person_id) {
+    public HardSkills(Long id_hard, String title_hard, String score_hard, Long personId) {
         this.id_hard = id_hard;
         this.title_hard = title_hard;
         this.score_hard = score_hard;
-        this.person_id = person_id;
+        this.personId = personId;
     }
      
     
