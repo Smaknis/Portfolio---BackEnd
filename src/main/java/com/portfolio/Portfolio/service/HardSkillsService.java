@@ -14,7 +14,7 @@ public class HardSkillsService implements IHardSkillsService{
     public HardSkillsRepository hardRepo;
     
     @Override
-    public List<HardSkills> verHardSkills() {
+    public List verHardSkills() {
         return hardRepo.findAll();
     }
 

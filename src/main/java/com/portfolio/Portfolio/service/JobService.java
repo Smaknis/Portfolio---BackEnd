@@ -14,7 +14,7 @@ public class JobService implements IJobService{
     public JobRepository jobRepo;
     
     @Override
-    public List<Job> verJob() {
+    public List verJob() {
         return jobRepo.findAll();
     }
 

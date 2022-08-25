@@ -9,7 +9,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 @Getter @Setter
-@Entity
+@Entity (name = "SOFTSKILLS")
 public class SoftSkills {
     
     @Id
@@ -18,16 +18,16 @@ public class SoftSkills {
     
     private String title_soft;
     private String score_soft;
-    private String person_id;
+    private Long personId;
 
     public SoftSkills() {
     }
 
-    public SoftSkills(Long id_soft, String title_soft, String score_soft, String person_id) {
+    public SoftSkills(Long id_soft, String title_soft, String score_soft, Long personId) {
         this.id_soft = id_soft;
         this.title_soft = title_soft;
         this.score_soft = score_soft;
-        this.person_id = person_id;
+        this.personId = personId;
     }
 
     

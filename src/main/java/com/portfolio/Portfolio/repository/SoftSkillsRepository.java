@@ -11,6 +11,6 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface SoftSkillsRepository extends JpaRepository <SoftSkills, Long>{
-    /*@Query("SELECT s FROM EXPERIENCIA s WHERE s.personId = :person_id")
-	public List<SoftSkills> getSoftSkillsByPersonId(@Param("personId") long personId );*/
+    @Query("SELECT s FROM SOFTSKILLS s WHERE s.personId = :personId")
+	public List<SoftSkills> getSoftSkillsByPersonId(@Param("personId") Long personId );
 }

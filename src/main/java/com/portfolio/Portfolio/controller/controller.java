@@ -7,6 +7,7 @@ import com.portfolio.Portfolio.model.Job;
 import com.portfolio.Portfolio.model.JobLocation;
 import com.portfolio.Portfolio.model.JournalType;
 import com.portfolio.Portfolio.model.Person;
+import com.portfolio.Portfolio.model.Portfolio;
 import com.portfolio.Portfolio.model.SoftSkills;
 import com.portfolio.Portfolio.service.IEducationService;
 import com.portfolio.Portfolio.service.IHardSkillsService;
@@ -25,19 +26,23 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 import com.portfolio.Portfolio.service.IJobLocationService;
+import com.portfolio.Portfolio.service.IPortfolioService;
 
 @RestController
 public class controller {
     
     @Autowired
-    private IPersonService personServ;
+    private IPortfolioService portfolioServ;
     
-    @GetMapping ("/")
+    @GetMapping("/portfolio/{personId}")
     @ResponseBody
-    public Person cargarDatos(Person persona){
-        return persona;
+    Portfolio getPortfolio(@PathVariable Long personId) {
+	return portfolioServ.getPortfolio(personId);
     }
     
+    @Autowired
+    private IPersonService personServ;
+        
     @PostMapping ("/new/person")
     public void agregarPerson(@RequestBody Person person){
        personServ.agregarPerson(person);
@@ -143,25 +148,25 @@ public class controller {
     
     @GetMapping ("/jobu")
     @ResponseBody
-    public List<JobLocation> verJobUbication () {
+    public List<JobLocation> verJobLocation () {
         
-        return jobuServ.verJobUbication();
+        return jobuServ.verJobLocation();
     }
     
     @PostMapping ("/newjobu/jobu")
-    public void agregarJobUbication(@RequestBody JobLocation jobu){
-       jobuServ.agregarJobUbication(jobu);
+    public void agregarJobLocation(@RequestBody JobLocation jobu){
+       jobuServ.agregarJobLocation(jobu);
     
     }
     
     @DeleteMapping ("/deletejobu/{Id}")
-    public void borrarJobUbication (@PathVariable Long Id) {
-        jobuServ.borrarJobUbication(Id);
+    public void borrarJobLocation (@PathVariable Long Id) {
+        jobuServ.borrarJobLocation(Id);
     }
     
     @PutMapping ("/editjobu/{id}")
-    public void editarJobUbication (@PathVariable Long id, @RequestBody JobLocation jobu){
-        jobuServ.editarJobUbication(jobu);
+    public void editarJobLocation (@PathVariable Long id, @RequestBody JobLocation jobu){
+        jobuServ.editarJobLocation(jobu);
     }
     
     @Autowired

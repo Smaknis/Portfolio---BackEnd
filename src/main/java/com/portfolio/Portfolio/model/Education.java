@@ -9,7 +9,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 @Getter @Setter
-@Entity
+@Entity (name = "EDUCATION")
 public class Education {
     
     @Id
@@ -22,12 +22,12 @@ public class Education {
     private String year_start_education;
     private String year_end_education;
     private String url_logo_education;
-    private String person_id;
+    private Long personId;
 
     public Education() {
     }
 
-    public Education(Long id_education, String institute_education, String title_education, String score_education, String year_start_education, String year_end_education, String url_logo_education, String person_id) {
+    public Education(Long id_education, String institute_education, String title_education, String score_education, String year_start_education, String year_end_education, String url_logo_education, Long personId) {
         this.id_education = id_education;
         this.institute_education = institute_education;
         this.title_education = title_education;
@@ -35,6 +35,6 @@ public class Education {
         this.year_start_education = year_start_education;
         this.year_end_education = year_end_education;
         this.url_logo_education = url_logo_education;
-        this.person_id = person_id;
+        this.personId = personId;
     }
 }

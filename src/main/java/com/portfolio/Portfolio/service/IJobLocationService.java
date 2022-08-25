@@ -7,13 +7,13 @@ import java.util.List;
 
 public interface IJobLocationService {
     
-    public List<JobLocation> verJobUbication();
+    public List<JobLocation> verJobLocation();
     
-    public void agregarJobUbication (JobLocation jobu);
+    public void agregarJobLocation (JobLocation jobu);
     
-    public void borrarJobUbication(Long id);
+    public void borrarJobLocation(Long id);
     
-    public JobLocation buscarJobUbication (Long id);
+    public JobLocation buscarJobLocation (Long id);
      
-    public void editarJobUbication (JobLocation jobu);
+    public void editarJobLocation (JobLocation jobu);
 }

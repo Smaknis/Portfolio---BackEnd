@@ -14,7 +14,7 @@ public class SoftSkillsService implements ISoftSkillsService{
     public SoftSkillsRepository softRepo;
     
     @Override
-    public List<SoftSkills> verSoftSkill() {
+    public List verSoftSkill() {
         return softRepo.findAll();
     }
 
@@ -36,5 +36,6 @@ public class SoftSkillsService implements ISoftSkillsService{
     @Override
     public void editarSoftSkill(SoftSkills soft) {
         softRepo.save(soft);
+        
     }
 }

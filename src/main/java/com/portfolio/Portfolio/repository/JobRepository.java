@@ -11,7 +11,7 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface JobRepository extends JpaRepository <Job, Long>{
     
-   /* @Query("SELECT j FROM Job j WHERE j.personId = :person_id")
-    public List<Job> getJobByPersonId(@Param("personId") long personId );*/
+    @Query("SELECT j FROM JOB j WHERE j.personId = :personId")
+    public List<Job> getJobByPersonId(@Param("personId") Long personId );
     
 }

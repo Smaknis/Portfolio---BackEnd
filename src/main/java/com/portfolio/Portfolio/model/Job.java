@@ -9,7 +9,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 @Getter @Setter
-@Entity
+@Entity (name = "JOB")
 public class Job {
     
     @Id
@@ -22,14 +22,15 @@ public class Job {
     private String date_end_job;
     private String actual_job;
     private String url_logo_job;
-    private String person_id;
-    private String job_ubication;
-    private String journal_type_id;
+    private Long personId;
+    private Long job_location;
+    private Long journal_type_id;
 
     public Job() {
     }
 
-    public Job(Long id_job, String position_job, String company_job, String date_start_job, String date_end_job, String actual_job, String url_logo_job, String person_id, String job_ubication, String journal_type_id) {
+    public Job(Long id_job, String position_job, String company_job, String date_start_job, String date_end_job, String actual_job, String url_logo_job, Long personId, Long job_location, Long journal_type_id) {
+        
         this.id_job = id_job;
         this.position_job = position_job;
         this.company_job = company_job;
@@ -37,8 +38,8 @@ public class Job {
         this.date_end_job = date_end_job;
         this.actual_job = actual_job;
         this.url_logo_job = url_logo_job;
-        this.person_id = person_id;
-        this.job_ubication = job_ubication;
+        this.personId = personId;
+        this.job_location = job_location;
         this.journal_type_id = journal_type_id;
     }
 
