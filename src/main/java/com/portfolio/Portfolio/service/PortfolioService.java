@@ -3,7 +3,7 @@ package com.portfolio.Portfolio.service;
 
 import com.portfolio.Portfolio.model.Education;
 import com.portfolio.Portfolio.model.HardSkills;
-import com.portfolio.Portfolio.model.Job;
+import com.portfolio.Portfolio.model.Jobs;
 import com.portfolio.Portfolio.model.Person;
 import com.portfolio.Portfolio.model.Portfolio;
 import com.portfolio.Portfolio.model.Proyect;
@@ -57,7 +57,7 @@ public class PortfolioService implements IPortfolioService{
             Person person = personRepository.findById(personId).orElse(null);
             
                        
-            List<Job> jobs = jobRepository.getJobByPersonId(personId);		
+            List<Jobs> jobs = jobRepository.getJobByPersonId(personId);		
 
             List<Education> edu = educationRepository.getEducationByPersonId(personId);
             

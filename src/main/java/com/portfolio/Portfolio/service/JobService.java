@@ -1,7 +1,7 @@
 
 package com.portfolio.Portfolio.service;
 
-import com.portfolio.Portfolio.model.Job;
+import com.portfolio.Portfolio.model.Jobs;
 import com.portfolio.Portfolio.repository.JobRepository;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,7 +19,7 @@ public class JobService implements IJobService{
     }
 
     @Override
-    public void agregarJob(Job job) {
+    public void agregarJob(Jobs job) {
         jobRepo.save(job);
     }
 
@@ -29,12 +29,12 @@ public class JobService implements IJobService{
     }
 
     @Override
-    public Job buscarJob(Long id) {
+    public Jobs buscarJob(Long id) {
         return jobRepo.findById(id).orElse(null);
     }
 
     @Override
-    public void editarJob(Job job) {
+    public void editarJob(Jobs job) {
         jobRepo.save(job);
     }
     

@@ -16,25 +16,27 @@ public class Education {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id_education;
     
-    private String institute_education;
-    private String title_education;
-    private String score_education;
-    private String year_start_education;
-    private String year_end_education;
+    private String institute;
+    private String title;
+    private String score;
+    private String year_start;
+    private String year_end;
     private String url_logo_education;
     private Long personId;
 
     public Education() {
     }
 
-    public Education(Long id_education, String institute_education, String title_education, String score_education, String year_start_education, String year_end_education, String url_logo_education, Long personId) {
+    public Education(Long id_education, String institute, String title, String score, String year_start, String year_end, String url_logo_education, Long personId) {
         this.id_education = id_education;
-        this.institute_education = institute_education;
-        this.title_education = title_education;
-        this.score_education = score_education;
-        this.year_start_education = year_start_education;
-        this.year_end_education = year_end_education;
+        this.institute = institute;
+        this.title = title;
+        this.score = score;
+        this.year_start = year_start;
+        this.year_end = year_end;
         this.url_logo_education = url_logo_education;
         this.personId = personId;
     }
+
+
 }

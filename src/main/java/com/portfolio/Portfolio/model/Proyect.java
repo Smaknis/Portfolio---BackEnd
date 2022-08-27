@@ -15,17 +15,17 @@ public class Proyect {
     @GeneratedValue(strategy = GenerationType.AUTO)    
     private Long id_proyect;
     
-    private String name_proyect;
-    private String description_proyect;
+    private String name;
+    private String description;
     private Long personId;
 
     public Proyect() {
     }
 
-    public Proyect(Long id_proyect, String name_proyect, String description_proyect, Long personId) {
+    public Proyect(Long id_proyect, String name, String description, Long personId) {
         this.id_proyect = id_proyect;
-        this.name_proyect = name_proyect;
-        this.description_proyect = description_proyect;
+        this.name = name;
+        this.description = description;
         this.personId = personId;
     }
     
