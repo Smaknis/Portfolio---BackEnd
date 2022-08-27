@@ -6,7 +6,7 @@ import java.util.List;
 
 public class Portfolio {
     private Person person;
-	private List<Job> jobs;
+	private List<Jobs> jobs;
         private List<Education> edu;
         private List<HardSkills> hard;
         private List<SoftSkills> soft;
@@ -18,10 +18,10 @@ public class Portfolio {
 	public void setPerson(Person person) {
 		this.person = person;
 	}
-	public List<Job> getJob() {
+	public List<Jobs> getJob() {
 		return jobs;
 	}
-	public void setJob(List<Job> jobs) {
+	public void setJob(List<Jobs> jobs) {
 		this.jobs = jobs;
 	}
         public List<Education> getEducation() {
@@ -52,7 +52,7 @@ public class Portfolio {
     public Portfolio() {
     }
 
-    public Portfolio(Person person, List<Job> jobs, List<Education> edu, List<HardSkills> hard, List<SoftSkills> soft, List<Proyect> proy) {
+    public Portfolio(Person person, List<Jobs> jobs, List<Education> edu, List<HardSkills> hard, List<SoftSkills> soft, List<Proyect> proy) {
         this.person = person;
         this.jobs = jobs;
         this.edu = edu;

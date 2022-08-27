@@ -16,17 +16,17 @@ public class HardSkills {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id_hard;
     
-    private String title_hard;
-    private String score_hard;
+    private String title;
+    private String score;
     private Long personId;
 
     public HardSkills() {
     }
 
-    public HardSkills(Long id_hard, String title_hard, String score_hard, Long personId) {
+    public HardSkills(Long id_hard, String title, String score, Long personId) {
         this.id_hard = id_hard;
-        this.title_hard = title_hard;
-        this.score_hard = score_hard;
+        this.title = title;
+        this.score = score;
         this.personId = personId;
     }
      

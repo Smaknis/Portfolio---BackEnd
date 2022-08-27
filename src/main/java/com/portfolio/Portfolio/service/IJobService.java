@@ -1,20 +1,20 @@
 
 package com.portfolio.Portfolio.service;
 
-import com.portfolio.Portfolio.model.Job;
+import com.portfolio.Portfolio.model.Jobs;
 import java.util.List;
 
 
 public interface IJobService {
     
-    public List<Job> verJob();
+    public List<Jobs> verJob();
     
-    public void agregarJob (Job job);
+    public void agregarJob (Jobs job);
     
     public void borrarJob (Long id);
     
-    public Job buscarJob (Long id);
+    public Jobs buscarJob (Long id);
      
-    public void editarJob (Job job);
+    public void editarJob (Jobs job);
     
 }

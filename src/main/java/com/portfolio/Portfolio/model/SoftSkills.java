@@ -16,17 +16,17 @@ public class SoftSkills {
     @GeneratedValue(strategy = GenerationType.AUTO)    
     private Long id_soft;
     
-    private String title_soft;
-    private String score_soft;
+    private String title;
+    private String score;
     private Long personId;
 
     public SoftSkills() {
     }
 
-    public SoftSkills(Long id_soft, String title_soft, String score_soft, Long personId) {
+    public SoftSkills(Long id_soft, String title, String score, Long personId) {
         this.id_soft = id_soft;
-        this.title_soft = title_soft;
-        this.score_soft = score_soft;
+        this.title = title;
+        this.score = score;
         this.personId = personId;
     }
 

@@ -3,16 +3,14 @@ package com.portfolio.Portfolio.controller;
 
 import com.portfolio.Portfolio.model.Education;
 import com.portfolio.Portfolio.model.HardSkills;
-import com.portfolio.Portfolio.model.Job;
-import com.portfolio.Portfolio.model.JobLocation;
-import com.portfolio.Portfolio.model.JournalType;
+import com.portfolio.Portfolio.model.Jobs;
 import com.portfolio.Portfolio.model.Person;
 import com.portfolio.Portfolio.model.Portfolio;
+import com.portfolio.Portfolio.model.Proyect;
 import com.portfolio.Portfolio.model.SoftSkills;
 import com.portfolio.Portfolio.service.IEducationService;
 import com.portfolio.Portfolio.service.IHardSkillsService;
 import com.portfolio.Portfolio.service.IJobService;
-import com.portfolio.Portfolio.service.IJournalTypeService;
 import com.portfolio.Portfolio.service.IPersonService;
 import com.portfolio.Portfolio.service.ISoftSkillsService;
 import java.util.List;
@@ -25,8 +23,8 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
-import com.portfolio.Portfolio.service.IJobLocationService;
 import com.portfolio.Portfolio.service.IPortfolioService;
+import com.portfolio.Portfolio.service.IProyect;
 
 @RestController
 public class controller {
@@ -70,13 +68,13 @@ public class controller {
     
     @GetMapping ("/jobs")
     @ResponseBody
-    public List<Job> verJobs () {
+    public List<Jobs> verJobs () {
         
         return jobServ.verJob();
     }
     
     @PostMapping ("/newjob/job")
-    public void agregarjob(@RequestBody Job job){
+    public void agregarjob(@RequestBody Jobs job){
        jobServ.agregarJob(job);
     
     }
@@ -87,7 +85,7 @@ public class controller {
     }
     
     @PutMapping ("/editjob/{id}")
-    public void editarJob (@PathVariable Long id, @RequestBody Job job){
+    public void editarJob (@PathVariable Long id, @RequestBody Jobs job){
         jobServ.editarJob(job);
     }
     
@@ -142,59 +140,6 @@ public class controller {
     public void editarHardSkills (@PathVariable Long id, @RequestBody HardSkills hard){
         hardServ.editarHardSkills(hard);
     }
-    
-    @Autowired
-    private IJobLocationService jobuServ;
-    
-    @GetMapping ("/jobu")
-    @ResponseBody
-    public List<JobLocation> verJobLocation () {
-        
-        return jobuServ.verJobLocation();
-    }
-    
-    @PostMapping ("/newjobu/jobu")
-    public void agregarJobLocation(@RequestBody JobLocation jobu){
-       jobuServ.agregarJobLocation(jobu);
-    
-    }
-    
-    @DeleteMapping ("/deletejobu/{Id}")
-    public void borrarJobLocation (@PathVariable Long Id) {
-        jobuServ.borrarJobLocation(Id);
-    }
-    
-    @PutMapping ("/editjobu/{id}")
-    public void editarJobLocation (@PathVariable Long id, @RequestBody JobLocation jobu){
-        jobuServ.editarJobLocation(jobu);
-    }
-    
-    @Autowired
-    private IJournalTypeService journalServ;
-    
-    @GetMapping ("/journal")
-    @ResponseBody
-    public List<JournalType> verJournalType () {
-        
-        return journalServ.verJournalType();
-    }
-    
-    @PostMapping ("/newjournal/journal")
-    public void agregarJournalType(@RequestBody JournalType journal){
-       journalServ.agregarJournalType(journal);
-    
-    }
-    
-    @DeleteMapping ("/deletejournal/{Id}")
-    public void borrarJournalType (@PathVariable Long Id) {
-        journalServ.borrarJournalType(Id);
-    }
-    
-    @PutMapping ("/editjournal/{id}")
-    public void editarJournalType (@PathVariable Long id, @RequestBody JournalType journal){
-        journalServ.editarJournalType(journal);
-    }
-    
    
     @Autowired
     private ISoftSkillsService softServ;
@@ -220,5 +165,31 @@ public class controller {
     @PutMapping ("/editsoft/{id}")
     public void editarSoftSkill (@PathVariable Long id, @RequestBody SoftSkills soft){
         softServ.editarSoftSkill(soft);
+    }
+    
+    @Autowired
+    private IProyect proyServ;
+    
+    @GetMapping ("/proy")
+    @ResponseBody
+    public List<Proyect> verProyect () {
+        
+        return proyServ.verProyect();
+    }
+    
+    @PostMapping ("/newproyect/proy")
+    public void agregarProyect(@RequestBody Proyect proy){
+       proyServ.agregarProyect(proy);
+    
+    }
+    
+    @DeleteMapping ("/deleteproy/{Id}")
+    public void borrarproyect (@PathVariable Long Id) {
+        proyServ.borrarProyect(Id);
+    }
+    
+    @PutMapping ("/editproy/{id}")
+    public void editarProyect (@PathVariable Long id, @RequestBody Proyect proy){
+        proyServ.editarProyect(proy);
     }
 }
