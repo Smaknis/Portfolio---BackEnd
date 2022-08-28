@@ -25,8 +25,10 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 import com.portfolio.Portfolio.service.IPortfolioService;
 import com.portfolio.Portfolio.service.IProyect;
+import org.springframework.web.bind.annotation.CrossOrigin;
 
 @RestController
+@CrossOrigin(origins = "http://localhost:4200") //sirve para que el front se pueda conectar con esta backend
 public class controller {
     
     @Autowired
