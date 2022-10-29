@@ -18,15 +18,17 @@ public class Proyect {
     private String name;
     private String description;
     private Long personId;
+    private Boolean edit;
 
     public Proyect() {
     }
 
-    public Proyect(Long id_proyect, String name, String description, Long personId) {
+    public Proyect(Long id_proyect, String name, String description, Long personId, Boolean edit) {
         this.id_proyect = id_proyect;
         this.name = name;
         this.description = description;
         this.personId = personId;
+        this.edit = edit;
     }
     
     

@@ -17,17 +17,19 @@ public class SoftSkills {
     private Long id_soft;
     
     private String title;
-    private String score;
+    private int score;
     private Long personId;
+    private Boolean edit;
 
     public SoftSkills() {
     }
 
-    public SoftSkills(Long id_soft, String title, String score, Long personId) {
+    public SoftSkills(Long id_soft, String title, int score, Long personId, Boolean edit) {
         this.id_soft = id_soft;
         this.title = title;
         this.score = score;
         this.personId = personId;
+        this.edit = edit;
     }
 
     

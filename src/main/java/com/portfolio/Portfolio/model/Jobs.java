@@ -24,13 +24,13 @@ public class Jobs {
     private String location_job;
     private String url_logo_job;
     private Long personId;
-    
+    private Boolean edit;
     
 
     public Jobs() {
     }
 
-    public Jobs(Long id_job, String position, String company, String journal_type, String date_start, String date_end, String location_job, String url_logo_job, Long personId) {
+    public Jobs(Long id_job, String position, String company, String journal_type, String date_start, String date_end, String location_job, String url_logo_job, Long personId, Boolean edit) {
         this.id_job = id_job;
         this.position = position;
         this.company = company;
@@ -40,6 +40,7 @@ public class Jobs {
         this.location_job = location_job;
         this.url_logo_job = url_logo_job;
         this.personId = personId;
+        this.edit = edit;
     }
       
 }
