@@ -23,11 +23,12 @@ public class Education {
     private String year_end;
     private String url_logo_education;
     private Long personId;
+    private Boolean edit;
 
     public Education() {
     }
 
-    public Education(Long id_education, String institute, String title, String score, String year_start, String year_end, String url_logo_education, Long personId) {
+    public Education(Long id_education, String institute, String title, String score, String year_start, String year_end, String url_logo_education, Long personId, Boolean edit) {
         this.id_education = id_education;
         this.institute = institute;
         this.title = title;
@@ -36,6 +37,7 @@ public class Education {
         this.year_end = year_end;
         this.url_logo_education = url_logo_education;
         this.personId = personId;
+        this.edit = edit;
     }
 
 

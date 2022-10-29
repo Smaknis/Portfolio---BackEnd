@@ -1,4 +1,4 @@
-
+    
 package com.portfolio.Portfolio.model;
 
 import javax.persistence.Entity;
@@ -28,15 +28,18 @@ public class Person {
     private String address;
     private String phone;
     private String email;
+    private String password;
+    private Boolean loginStatus;
     private String birth_date;
     private String nationality;
-
+    private Boolean edit;
+    
     
 
     public Person() {
     }
 
-    public Person(Long id, String name, String last_name, String back_image, String url_image, String position, String title, String location, String about1, String about2, String address, String phone, String email, String birth_date, String nationality) {
+    public Person(Long id, String name, String last_name, String back_image, String url_image, String position, String title, String location, String about1, String about2, String address, String phone, String email, String password, Boolean loginStatus, String birth_date, String nationality, Boolean edit) {
         this.id = id;
         this.name = name;
         this.last_name = last_name;
@@ -50,11 +53,11 @@ public class Person {
         this.address = address;
         this.phone = phone;
         this.email = email;
+        this.password = password;
+        this.loginStatus = loginStatus;
         this.birth_date = birth_date;
         this.nationality = nationality;
+        this.edit = edit;
     }
-
- 
-
-    
+   
 }
