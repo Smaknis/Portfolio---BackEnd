@@ -28,7 +28,7 @@ import com.portfolio.Portfolio.service.IProyect;
 import org.springframework.web.bind.annotation.CrossOrigin;
 
 @RestController
-@CrossOrigin(origins = "http://localhost:4200") //sirve para que el front se pueda conectar con esta backend
+@CrossOrigin(origins = "https://portfolio-sergio-miguel-maknis.web.app/") //sirve para que el front se pueda conectar con esta backend
 public class controller {
     
     @Autowired
